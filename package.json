@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-picker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "react-native-easy-picker is a single picker",
   "main": "index.js",
   "dependencies": {
