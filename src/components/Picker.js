@@ -18,6 +18,7 @@ export default class SelectPicker extends Component {
         animationType: 'none',
         width: '80%',
         height: '75%',
+        style: {},
         textStyle: {},
         itemTextStyle: {},
         iconColor: '#333',
@@ -37,9 +38,7 @@ export default class SelectPicker extends Component {
         const { data = [], iconColor, textStyle } = this.props;
 
         return (
-            <Root activeOpacity={1} onPress={e => {
-                this.modal.open();
-            }}>
+            <Root activeOpacity={1} style={style} onPress={e => this.modal.open()}>
                 <Text style={textStyle}>{data[active].text}</Text>
 
                 <PickerModal

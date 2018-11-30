@@ -5,6 +5,7 @@ import {
     ScrollView,
     TouchableNativeFeedback as Touch,
     TouchableOpacity as OTouch,
+    Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -51,7 +52,7 @@ export default class Picker extends Component {
                 onRequestClose={this.close}
                 hardwareAccelerated={true}
                 presentationStyle='overFullScreen'>
-                <Float>
+                <Float activeOpacity={1}>
                     <OTouch
                         activeOpacity={1}
                         style={{ width, height }}
@@ -60,7 +61,9 @@ export default class Picker extends Component {
                             flex: 1,
                         }} contentContainerStyle={{
                             elevation: 8,
+                            borderRadius: 3,
                             backgroundColor: '#fff',
+                            justifyContent: 'center',
                         }}>
                             <Root>
                                 {data.map((item, index) => (
@@ -99,7 +102,7 @@ const Float = styled.TouchableOpacity`
 const Root = styled.View`
     width: 100%;
     background-color: #fff;
-    border-radius: 2px;
+    border-radius: 3px;
 `;
 
 const Item = styled.View`
