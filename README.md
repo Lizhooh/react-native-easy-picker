@@ -36,6 +36,4 @@ import Picker from 'react-native-easy-picker';
 />
 ```
 
-### Props
-
 ![](./image/demo.gif)
